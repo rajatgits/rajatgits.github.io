@@ -51,6 +51,113 @@ html {
   box-shadow: 0 0 8px rgba(47, 141, 255, 0.45);
   border: 2px solid #06090f;
 }
+/* =========================================
+   CUSTOM CURSOR (rounded dot + ring)
+   ========================================= */
+
+/* Hide native cursor on desktop only */
+@media (hover: hover) and (pointer: fine) {
+  html,
+  body,
+  a,
+  button,
+  .btn,
+  .card,
+  input,
+  textarea,
+  [role="button"] {
+    cursor: none !important;
+  }
+}
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  will-change: transform;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Inner dot — precise, fast */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--neon);
+  box-shadow:
+    0 0 10px var(--neon),
+    0 0 20px rgba(47, 141, 255, 0.5);
+}
+
+/* Outer ring — laggy, larger */
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(47, 141, 255, 0.7);
+  background: rgba(47, 141, 255, 0.04);
+  backdrop-filter: blur(1px);
+  transition:
+    width 0.25s ease,
+    height 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    opacity 0.2s ease;
+}
+
+/* Show cursor once mouse moves */
+body.cursor-active .cursor-dot,
+body.cursor-active .cursor-ring {
+  opacity: 1;
+}
+
+/* Hover state — ring expands & glows on interactive elements */
+body.cursor-hover .cursor-ring {
+  width: 56px;
+  height: 56px;
+  border-color: var(--neon);
+  background: rgba(47, 141, 255, 0.1);
+  box-shadow: 0 0 24px rgba(47, 141, 255, 0.35);
+}
+body.cursor-hover .cursor-dot {
+  width: 4px;
+  height: 4px;
+}
+
+/* Click state — quick pulse */
+body.cursor-click .cursor-ring {
+  width: 28px;
+  height: 28px;
+  background: rgba(47, 141, 255, 0.25);
+}
+
+/* Hide on touch devices */
+@media (hover: none), (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+  html,
+  body,
+  a,
+  button,
+  .btn,
+  .card {
+    cursor: auto !important;
+  }
+}
 
 body {
   background:
@@ -1098,6 +1205,79 @@ h1 .accent {
   flex-wrap: wrap;
   gap: 14px;
   justify-content: center;
+}
+/* =========================================
+   TYPING QUOTE ANIMATION
+   ========================================= */
+
+.quote-section {
+  padding: 30px 0 30px;
+  text-align: center;
+  background: transparent;
+}
+
+.quote-container {
+  font-family: var(--display);
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  color: var(--teal);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+
+/* The stylized quotation marks */
+.quote-mark {
+  color: var(--teal);
+  font-family: var(--display);
+  font-size: 1.6em;
+  font-weight: 700;
+  line-height: 0;
+  vertical-align: middle;
+  opacity: 0.7;
+  transition:
+    opacity 0.3s,
+    color 0.3s;
+}
+
+.quote-container:hover .quote-mark {
+  opacity: 1;
+  color: var(--neon);
+}
+
+/* The blinking cursor */
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: var(--neon);
+  margin-left: 4px;
+  vertical-align: text-bottom;
+  animation: blink 0.8s step-end infinite;
+  box-shadow: 0 0 8px var(--neon);
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .quote-section {
+    padding: 15px 0 15px;
+  }
+  .quote-container {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
 }
 
 footer {

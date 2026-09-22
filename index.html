@@ -17,6 +17,9 @@
       rel="stylesheet"
     />
   </head>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
   <body>
     <nav>
       <div class="nav-inner">
@@ -603,10 +606,23 @@
       </div>
     </section>
 
+    <!-- QUOTE / TYPING ANIMATION -->
+    <section class="quote-section">
+      <div class="wrap">
+        <div class="quote-container">
+          <span class="quote-mark">“</span>
+          <span id="typing-text" class="typing-text"></span>
+          <span class="cursor"></span>
+          <span class="quote-mark">”</span>
+        </div>
+      </div>
+    </section>
+
     <footer>
       <div class="wrap foot-inner">
         <span>© <span id="yr"></span> Rajat Raj · Hyderabad, India</span>
       </div>
     </footer>
+    <script src="app.js"></script>
   </body>
 </html>
