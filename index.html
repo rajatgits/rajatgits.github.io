@@ -1,146 +1,669 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="My Portfolio, A short description about me through website.">
-    <meta name="author" content="Rajat Raj">
-    <meta name="keywords"
-        content="Rajat Raj, Java, Web Design, Web Developer, HTML, CSS, JavaScript, Node.js, ReactJs, Database, MongoDB, Expressjs, MySql, Redis, NextJs, TypeScript, JWT, Mongoose, Render, Programming, Coding, Cloud Computing, Blog, Portfolio, Community, GitHub, Git, Profile, Front-End Developer, Back-Developer, Server">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <link rel="icon" href="./assets/icon.jpg">
-    <link rel="stylesheet" href="./style.css" type="text/css">
-    <title>Rajat Raj</title>
-</head>
-<body>
-    <!-- PRELOADER -->
-    <div class="preloader"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rajat Raj — Software Engineer</title>
+    <meta
+      name="description"
+      content="Rajat Raj — Software Engineer building backend systems with Java, Spring Boot, and GenAI. Based in Hyderabad, India."
+    />
+    <link rel="icon" type="image/jpg" href="assets/icon.jpg" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-inner">
+        <div class="brand">
+          <span class="pulse"></span><b>Rajat Raj</b
+          ><span class="slash">//</span> Backend&nbsp;&amp;&nbsp;GenAI
+        </div>
+        <div class="nav-links">
+          <a href="#work">work</a>
+          <a href="#stack">stack</a>
+          <a href="#projects">projects</a>
+          <a href="#about">about</a>
+          <a href="#contact">contact</a>
+        </div>
+      </div>
+    </nav>
 
-    <div class="container">
-        <!-- INTRODUCTION -->
-        <section class="introduction">
-            <div class="salute">
-                <div class="saluteTextContainer">
-                    <h1 class="saluteText">Hi</h1>
-                </div>
-                <div class="saluteImageContainer">
-                    <img src="./assets/person.png" alt="Person Image" class="saluteImg">
-                </div>
-            </div>
-            <div class="nameContainer">
-                <h2 class="name">I'm Rajat</h2>
-            </div>
-            <div class="jobTitleContainer dark">
-                <h2 class="jobTitle">a Backend Developer</h2>
-            </div>
-            <div class="jobTitleContainer purple">
-                <h2 class="jobTitle">and Web Designer</h2>
-            </div>
-        </section>
+    <header class="hero" id="top">
+      <div class="wrap">
+        <div class="hero-text">
+          <div class="status-line">
+            <span class="live"><span class="dot"></span>ONLINE</span>
+            <span class="sep">/</span>
+            <span>Hyderabad, India</span>
+          </div>
+          <h1>
+            Rajat Raj<br /><span class="accent">builds backend systems</span>
+            that scale.
+          </h1>
+          <p class="tagline">
+            Software Engineer. Java &amp; Spring Boot. Backend infrastructure
+            &amp; GenAI.
+          </p>
+          <p class="lede">
+            I build reliable backend systems — REST APIs, microservices, and
+            CI/CD pipelines — where performance, correctness, and clean
+            architecture come first. Right now I'm exploring how GenAI fits into
+            production backends.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#work"
+              >Explore the work <span class="arr">→</span></a
+            >
+            <a
+              class="btn btn-ghost"
+              href="https://github.com/rajatgits"
+              target="_blank"
+              rel="noopener"
+              >GitHub <span class="arr">↗</span></a
+            >
+          </div>
+        </div>
 
-        <!-- PROJECTS -->
-        <section class="projects">
-            <h1 class="projectsTitle">Here are some of my projects</h1>
-            <div class="project">
-                <div class="phone">
-                    <img src="./assets/phone.png" alt="Phone Image">
-                    <div class="phoneScreen">
-                        <img src="./assets/socialiser.png" alt="Socialiser website image" class="phoneApp">
-                    </div>
-                </div>
-                <div class="projectDetail">
-                    <div class="projectTitle">Socialiser</div>
-                    <p class="projectDescription">Developed a SMMA website using ReactJs, NextJs with MongoDB and CSS for styling, and for authentication i used AuthJs, This is a complete full stack website responsive with all devices. Implemented Google OAuth also for good user experience and Blog page as well as Admin panel to write and delete the blogs.</p>
-                    <a href="https://socialiser.vercel.app/"><button class="projectButton">Learn More</button></a>
-                </div>
+        <div class="hero-terminal" aria-hidden="true">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="terminal-title">release-pipeline</div>
             </div>
-            <div class="project">
-                <div class="laptop">
-                    <img src="./assets/laptop.png" alt="Laptop Image" class="laptopImage">
-                    <div class="laptopScreen">
-                        <img src="./assets/alignect.png" alt="Alignect website image" class="laptopApp">
-                    </div>
+            <div class="terminal-body">
+              <div class="terminal-command seq" style="--i: 0">
+                <span class="prompt">$</span>
+                <span>git push origin main</span>
+                <span class="cursor"></span>
+              </div>
+              <div class="terminal-pipeline">
+                <div class="seq" style="--i: 1">
+                  <span class="check">✓</span>
+                  <span class="step-name">build</span>
+                  <span class="step-detail">Jenkins</span>
                 </div>
-                <div class="projectDetail">
-                    <div class="projectTitle">Alignect</div>
-                    <p class="projectDescription">Developed a cutting-edge project management platform to streamline project tracking and boost efficiency, utilizing the power of the latest technologies, ultimately driving increased site traffic. Integrated the comprehensive architecture with Next.js, React.js, Hono.js, Tailwind CSS and Appwrite to optimize performance. This strategic approach resulted in a significant 36% reduction in website load time.</p>
-                    <a href="https://alignect.vercel.app/"><button class="projectButton">Learn More</button></a>
+                <div class="seq" style="--i: 2">
+                  <span class="check">✓</span>
+                  <span class="step-name">test</span>
+                  <span class="step-detail">JUnit · Mockito</span>
                 </div>
+                <div class="seq" style="--i: 3">
+                  <span class="check">✓</span>
+                  <span class="step-name">analyze</span>
+                  <span class="step-detail">SonarQube</span>
+                </div>
+                <div class="seq" style="--i: 4">
+                  <span class="check">✓</span>
+                  <span class="step-name">package</span>
+                  <span class="step-detail">Docker</span>
+                </div>
+                <div class="seq" style="--i: 5">
+                  <span class="check">✓</span>
+                  <span class="step-name">release</span>
+                  <span class="step-detail">zero rollbacks</span>
+                </div>
+              </div>
+              <div class="terminal-success seq" style="--i: 6">
+                all checks passed
+              </div>
+              <div class="terminal-metrics">
+                <div class="metric seq" style="--i: 7">
+                  <div class="metric-value">-50%</div>
+                  <div class="metric-label">API response time</div>
+                </div>
+                <div class="metric seq" style="--i: 8">
+                  <div class="metric-value">-30%</div>
+                  <div class="metric-label">production downtime</div>
+                </div>
+                <div class="metric seq" style="--i: 9">
+                  <div class="metric-value">-40%</div>
+                  <div class="metric-label">SQL execution time</div>
+                </div>
+                <div class="metric seq" style="--i: 10">
+                  <div class="metric-value">-30%</div>
+                  <div class="metric-label">technical debt</div>
+                </div>
+              </div>
             </div>
-            <div class="project">
-                <div class="phone">
-                    <img src="./assets/phone.png" alt="Phone Image">
-                    <div class="phoneScreen">
-                        <img src="" alt="" class="phoneApp">
-                    </div>
-                </div>
-                <div class="projectDetail">
-                    <div class="projectTitle">Vortex</div>
-                    <p class="projectDescription">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis aspernatur qui ipsa rerum voluptate officia temporibus asperiores illo nisi. Sed, iste inventore odit consectetur facere soluta quas eos doloremque repellat!</p>
-                    <a href=""><button class="projectButton">Learn More</button></a>
-                </div>
-            </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </header>
 
-        <!-- GITHUB -->
-        <section class="githubContainer">
-            <div class="githubTitle">Want to see all projects?</div>
-            <div class="github">
-                <div><img src="./assets/github.png" alt="GitHub Logo" class="githubImage"></div>
-                <a href="https://github.com/rajatgits"  class="githubProfile"><h2>GitHub/rajatgits</h2></a>
-            </div>
-            <div class="githubChart">
-                <div class="dates">
-                    <span>Jan</span>
-                    <span>Feb</span>
-                    <span>Mar</span>
-                    <span>Apr</span>
-                    <span>May</span>
-                    <span>Jun</span>
-                    <span>Jul</span>
-                    <span>Agu</span>
-                    <span>Sep</span>
-                    <span>Oct</span>
-                    <span>Nov</span>
-                    <span>Dec</span>
+    <!-- INSTRUMENTS STRIP (grid on mobile, marquee on desktop) -->
+    <section style="padding-top: 0">
+      <div class="wrap wrap-wide">
+        <div class="instruments-viewport">
+          <div class="instruments-track">
+            <!-- Primary set (visible on mobile + desktop) -->
+            <div class="instruments">
+              <div class="inst">
+                <div class="k">Focus</div>
+                <div class="v">
+                  Backend engineering <small>/ Java · Spring Boot</small>
                 </div>
-                <a href="https://github.com/rajatgits"><div class="boxContainer"></div></a>
-                <h1 class="githubTitle">ON GITHUB</h1>
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section class="contact">
-            <div class="contactText">Want to Connect!</div>
-            <nav>
-                <ul class="social">
-                    <li><a href="https://www.linkedin.com/in/rajatlnkdins/" class="socialLinks"><img src="./assets/linkedin.png" alt="LinkedIn logo"></a></li>
-                    <li><a href="https://www.instagram.com/rajat.igs/" class="socialLinks"><img src="./assets/instagram.png" alt="Instagram logo"></a></li>
-                    <li><a href="https://x.com/rajattwts" class="socialLinks"><img src="./assets/x.png" alt="X logo"></a></li>
-                    <li><a href="mailto:rajatrajemails@gmail.com" class="socialLinks"><img src="./assets/mail.png" alt="Gmail logo"></a></li>
-                </ul>
-            </nav>
-            <div class="connect">
-                <form class="contactForm">
-                    <input type="text" class="formName" placeholder="Full Name" required>
-                    <input type="email" class="formEmail" placeholder="Email" required>
-                    <textarea class="formMessage" rows="4" placeholder="Message"></textarea>
-                    <button type="submit">Send</button>
-                </form>
-                <div class="logo">
-                    <a href="index.html"><img src="./assets/logo.png" alt="Portfolio Logo" class="portfolioLogo"></a>
+              </div>
+              <div class="inst">
+                <div class="k">Building toward</div>
+                <div class="v">
+                  GenAI-powered systems <small>/ Spring AI</small>
                 </div>
+              </div>
+              <div class="inst">
+                <div class="k">Core stack</div>
+                <div class="v">
+                  Java · Spring Boot <small>/ React.js · Next.js</small>
+                </div>
+              </div>
+              <div class="inst">
+                <div class="k">Status</div>
+                <div class="v">
+                  Developer @ Wipro <small>/ Hyderabad</small>
+                </div>
+              </div>
             </div>
-        </section>
 
-        <!-- FOOTER -->
-        <footer class="footer">
-            <p class="developer">Copyright © Rajat, All rights reserverd.</p>
-            <h3 class="developer">Made with ❤️ by Rajat :)</h3>
-        </footer>
-    </div>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="./app.js"></script>
+            <!-- Duplicate set (only shown on desktop for seamless loop) -->
+            <div class="instruments instruments-duplicate" aria-hidden="true">
+              <div class="inst">
+                <div class="k">Focus</div>
+                <div class="v">
+                  Backend engineering <small>/ Java · Spring Boot</small>
+                </div>
+              </div>
+              <div class="inst">
+                <div class="k">Building toward</div>
+                <div class="v">
+                  GenAI-powered systems <small>/ Spring AI</small>
+                </div>
+              </div>
+              <div class="inst">
+                <div class="k">Core stack</div>
+                <div class="v">
+                  Java · Spring Boot <small>/ React.js · Next.js</small>
+                </div>
+              </div>
+              <div class="inst">
+                <div class="k">Status</div>
+                <div class="v">
+                  Developer @ Wipro <small>/ Hyderabad</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="work">
+      <div class="wrap">
+        <div class="eyebrow">Experience</div>
+        <h2 class="section-title">Where I've shipped</h2>
+        <p class="section-sub">
+          Production backend work, CI/CD pipelines, and voice-first apps — the
+          roles behind the numbers.
+        </p>
+
+        <div class="grid">
+          <!-- WIPRO - DEVELOPER -->
+          <a
+            class="card"
+            href="https://www.linkedin.com/in/rajatlnkdins"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="topic">
+              <span class="ld"></span>/work/wipro-developer
+            </div>
+            <h4>Developer @ Wipro</h4>
+            <p>
+              Spearheaded migration of legacy Java systems to Spring Boot,
+              cutting API response times by 50%. Enhanced system reliability
+              through Jenkins/Docker CI/CD pipelines and optimized SQL queries
+              for 40% faster execution.
+            </p>
+            <ul class="card-list">
+              <li>
+                Led microservices architecture optimization, reducing server
+                costs.
+              </li>
+              <li>
+                Decreased production downtime by 30% with zero-rollback
+                releases.
+              </li>
+              <li>
+                Reduced technical debt by 30% via SonarQube and security
+                enhancements.
+              </li>
+            </ul>
+            <div class="chips">
+              <span class="chip"><b>-50%</b> API latency</span>
+              <span class="chip"><b>-30%</b> downtime</span>
+              <span class="chip"><b>-40%</b> SQL time</span>
+            </div>
+            <div class="open">
+              Mar 2025 — Present · Hyderabad <span class="arr">↗</span>
+            </div>
+          </a>
+
+          <!-- WIPRO - TRAINEE -->
+          <a
+            class="card"
+            href="https://www.linkedin.com/in/rajatlnkdins"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="topic"><span class="ld"></span>/work/wipro-trainee</div>
+            <h4>Trainee @ Wipro</h4>
+            <p>
+              Collaborated on Java-based application development and debugging.
+              Designed REST APIs with Spring Boot to enable seamless data
+              exchange between microservices.
+            </p>
+            <ul class="card-list">
+              <li>
+                Improved application performance by 20% through API
+                optimization.
+              </li>
+              <li>
+                Established robust Git/GitHub branching strategy for a 3-person
+                team.
+              </li>
+              <li>
+                Decreased code integration conflicts by 60% and enforced clean
+                code.
+              </li>
+            </ul>
+            <div class="chips">
+              <span class="chip"><b>+20%</b> performance</span>
+              <span class="chip"><b>-60%</b> conflicts</span>
+              <span class="chip">REST APIs</span>
+            </div>
+            <div class="open">Previous Role <span class="arr">↗</span></div>
+          </a>
+
+          <!-- BLUE PLANET -->
+          <a
+            class="card"
+            href="https://www.linkedin.com/in/rajatlnkdins"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="topic"><span class="ld"></span>/work/blue-planet</div>
+            <h4>Software Developer Intern @ Blue Planet</h4>
+            <p>
+              Developed and launched 3 Alexa skills as a Python developer on the
+              Pan Health team. Implemented voice recognition software and owned
+              the medicine-reminder skill.
+            </p>
+            <ul class="card-list">
+              <li>
+                Served a six-month tenure focused on voice-first health tooling.
+              </li>
+              <li>Drove a 3.6-point increase in user engagement.</li>
+              <li>Improved overall customer satisfaction ratings.</li>
+            </ul>
+            <div class="chips">
+              <span class="chip"><b>3</b> Alexa skills</span>
+              <span class="chip"><b>+3.6</b> engagement</span>
+              <span class="chip">Python</span>
+            </div>
+            <div class="open">
+              May 2022 — Nov 2022 · Remote <span class="arr">↗</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section id="stack">
+      <div class="wrap">
+        <div class="eyebrow">Technical surface · Skills</div>
+        <h2 class="section-title">Stack &amp; tooling</h2>
+        <p class="section-sub">
+          From Java microservices on the backend to the React front ends that
+          sit on top — the surface I build across.
+        </p>
+
+        <div class="matrix">
+          <div class="mrow">
+            <div class="mh"><span class="ix">01</span>Backend &amp; APIs</div>
+            <div class="items">
+              <span>Spring Boot</span><span>Spring AI</span><span>Hono.js</span
+              ><span>ExpressJS</span><span>REST APIs</span>
+            </div>
+          </div>
+          <div class="mrow">
+            <div class="mh"><span class="ix">02</span>Frontend</div>
+            <div class="items">
+              <span>React.js</span><span>Next.js</span><span>Tailwind CSS</span
+              ><span>Auth.js</span>
+            </div>
+          </div>
+          <div class="mrow">
+            <div class="mh"><span class="ix">03</span>Languages</div>
+            <div class="items">
+              <span>Java</span><span>JavaScript</span><span>SQL</span
+              ><span>HTML</span><span>CSS</span>
+            </div>
+          </div>
+          <div class="mrow">
+            <div class="mh"><span class="ix">04</span>Data &amp; databases</div>
+            <div class="items">
+              <span>MySQL</span><span>MongoDB</span><span>JPA</span
+              ><span>JDBC</span><span>ORM</span>
+            </div>
+          </div>
+          <div class="mrow">
+            <div class="mh"><span class="ix">05</span>DevOps &amp; infra</div>
+            <div class="items">
+              <span>Docker</span><span>Jenkins</span><span>Git</span
+              ><span>GitHub</span><span>CI/CD</span>
+            </div>
+          </div>
+          <div class="mrow">
+            <div class="mh">
+              <span class="ix">06</span>Testing &amp; quality
+            </div>
+            <div class="items">
+              <span>JUnit</span><span>Mockito</span><span>SonarQube</span>
+            </div>
+          </div>
+          <div class="mrow">
+            <div class="mh"><span class="ix">07</span>Tools</div>
+            <div class="items">
+              <span>IntelliJ IDEA</span><span>Visual Studio Code</span
+              ><span>Bcrypt.js</span><span>Appwrite</span>
+            </div>
+          </div>
+          <div class="mrow">
+            <div class="mh"><span class="ix">08</span>Currently exploring</div>
+            <div class="items">
+              <span>Spring AI</span><span>GenAI</span><span>Next.js</span
+              ><span>MongoDB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="eyebrow">Projects</div>
+        <h2 class="section-title">More from the workbench</h2>
+        <p class="section-sub">
+          Backend systems, full-stack apps, and production work — from Wipro's
+          microservices to personal builds.
+        </p>
+
+        <div class="grid">
+          <a
+            class="card"
+            href="https://github.com/rajatgits/Alignect"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="topic"><span class="ld"></span>/web/alignect</div>
+            <h4>Alignect</h4>
+            <p>
+              A project-management platform built to streamline tracking and
+              boost team efficiency, with Next.js, React.js, Hono.js, Tailwind
+              CSS and Appwrite — cutting page load time by 36%.
+            </p>
+            <div class="chips">
+              <span class="chip">Next.js</span><span class="chip">Hono.js</span
+              ><span class="chip">Appwrite</span>
+            </div>
+            <span class="open">open repo <span class="arr">↗</span></span>
+          </a>
+
+          <a
+            class="card"
+            href="https://github.com/rajatgits/Socialiser"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="topic"><span class="ld"></span>/web/socialiser</div>
+            <h4>Socialiser</h4>
+            <p>
+              A website built for SMMA agencies with Next.js, React.js and
+              Auth.js/Bcrypt.js — a 35% stronger auth flow drove a 30% lift in
+              client retention and a 20% traffic boost.
+            </p>
+            <div class="chips">
+              <span class="chip">Next.js</span><span class="chip">Auth.js</span
+              ><span class="chip">Bcrypt.js</span>
+            </div>
+            <span class="open">open repo <span class="arr">↗</span></span>
+          </a>
+
+          <a
+            class="card"
+            href="https://github.com/rajatgits/Docsary"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="topic"><span class="ld"></span>/web/docsary</div>
+            <h4>Docsary</h4>
+            <p>
+              A TypeScript project for organizing and managing documents, built
+              to explore clean data models and structured full-stack
+              architecture end to end.
+            </p>
+            <div class="chips">
+              <span class="chip">TypeScript</span
+              ><span class="chip">full-stack</span>
+            </div>
+            <span class="open">open repo <span class="arr">↗</span></span>
+          </a>
+
+          <a
+            class="card"
+            href="https://github.com/rajatgits/Talkker"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="topic"><span class="ld"></span>/web/talkker</div>
+            <h4>Talkker</h4>
+            <p>
+              A TypeScript messaging app exploring real-time communication
+              patterns — sockets, message state, and a responsive chat UI.
+            </p>
+            <div class="chips">
+              <span class="chip">TypeScript</span
+              ><span class="chip">real-time</span>
+            </div>
+            <span class="open">open repo <span class="arr">↗</span></span>
+          </a>
+
+          <a
+            class="card"
+            href="https://github.com/rajatgits/LeetCodes"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="topic"><span class="ld"></span>/dsa/leetcodes</div>
+            <h4>LeetCodes</h4>
+            <p>
+              An ongoing, organized collection of solved LeetCode problems in
+              Java, tracking DSA practice by pattern and difficulty as part of
+              interview prep.
+            </p>
+            <div class="chips">
+              <span class="chip">Java</span><span class="chip">DSA</span
+              ><span class="chip">problem-solving</span>
+            </div>
+            <span class="open">open repo <span class="arr">↗</span></span>
+          </a>
+
+          <a
+            class="card"
+            href="https://github.com/rajatgits/rajatgits.github.io"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="topic"><span class="ld"></span>/web/portfolio</div>
+            <h4>rajatgits.github.io</h4>
+            <p>
+              Personal developer profile and portfolio — the GitHub README that
+              started it, now growing into a full site.
+            </p>
+            <div class="chips">
+              <span class="chip">HTML</span
+              ><span class="chip">personal brand</span>
+            </div>
+            <span class="open">open repo <span class="arr">↗</span></span>
+          </a>
+
+          <a
+            class="card"
+            href="https://www.linkedin.com/in/rajatlnkdins"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="topic">
+              <span class="ld"></span>/backend/wipro-migration
+            </div>
+            <h4>Legacy → Spring Boot Migration</h4>
+            <p>
+              Led the migration of legacy Java systems to Spring Boot at Wipro —
+              50% faster API response times, optimized microservices, and lower
+              server costs.
+            </p>
+            <div class="chips">
+              <span class="chip">Java</span><span class="chip">Spring Boot</span
+              ><span class="chip">microservices</span>
+            </div>
+            <span class="open">read more <span class="arr">↗</span></span>
+          </a>
+
+          <a
+            class="card"
+            href="https://www.linkedin.com/in/rajatlnkdins"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="topic"><span class="ld"></span>/voice/alexa-skills</div>
+            <h4>Alexa Skills · Pan Health</h4>
+            <p>
+              Built and launched 3 Alexa skills as a Python developer for the
+              Pan Health team, including a medicine-reminder skill — a 3.6-point
+              lift in user engagement.
+            </p>
+            <div class="chips">
+              <span class="chip">Python</span><span class="chip">Alexa</span
+              ><span class="chip">voice UI</span>
+            </div>
+            <span class="open">read more <span class="arr">↗</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="wrap">
+        <div class="eyebrow">Foundations &amp; direction</div>
+        <h2 class="section-title">What grounds the work</h2>
+        <div class="duo">
+          <div class="info-panel">
+            <h3>CS foundations</h3>
+            <ul>
+              <li>Data structures &amp; algorithms</li>
+              <li>Object-oriented programming</li>
+              <li>Operating systems</li>
+              <li>Database management systems</li>
+              <li>Java</li>
+              <li>Software architecture &amp; clean code</li>
+            </ul>
+          </div>
+          <div class="info-panel">
+            <h3>Focus &amp; technical interests</h3>
+            <ul>
+              <li>Backend engineering &amp; microservices</li>
+              <li>REST API design</li>
+              <li>CI/CD &amp; DevOps (Jenkins, Docker)</li>
+              <li>GenAI in production systems</li>
+              <li>Git workflows &amp; version control</li>
+              <li>Code quality &amp; testing (SonarQube, JUnit)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="info-panel" style="margin-top: 18px">
+          <h3>Education</h3>
+          <p style="color: var(--mute); margin: 0">
+            B.Tech in Computer Science &amp; Engineering, Haldia Institute of
+            Technology (Dec 2020 – May 2024), CGPA 8.69/10. Coursework spanned
+            Data Structures, Algorithms, DBMS, Java, OOP, and Operating Systems.
+          </p>
+        </div>
+
+        <div class="info-panel" style="margin-top: 18px">
+          <h3>Long-term vision</h3>
+          <p style="color: var(--mute); margin: 0">
+            I'm building deep expertise in backend engineering — pairing strong
+            CS fundamentals with hands-on Java, Spring Boot, and cloud-native
+            tooling. The goal is to build reliable, well-architected backend
+            systems and explore how GenAI fits into them. Outside of code:
+            traveling, singing, badminton, and the gym.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <div class="contact-card">
+          <div class="eyebrow" style="justify-content: center">
+            Open to · backend roles · GenAI work
+          </div>
+          <h2>Let's build something that scales.</h2>
+          <p>
+            Backend engineering, Java/Spring Boot development, or GenAI-driven
+            applications — I'd be glad to talk.
+          </p>
+          <div class="contact-links">
+            <a class="btn btn-primary" href="mailto:rajatrajemails@gmail.com"
+              >Email me <span class="arr">→</span></a
+            >
+            <a
+              class="btn btn-ghost"
+              href="https://www.linkedin.com/in/rajatlnkdins"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn <span class="arr">↗</span></a
+            >
+            <a
+              class="btn btn-ghost"
+              href="https://github.com/rajatgits"
+              target="_blank"
+              rel="noopener"
+              >GitHub <span class="arr">↗</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap foot-inner">
+        <span>© <span id="yr"></span> Rajat Raj · Hyderabad, India</span>
+      </div>
+    </footer>
+  </body>
 </html>
