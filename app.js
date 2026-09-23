@@ -1,4 +1,5 @@
 document.getElementById("yr").textContent = new Date().getFullYear();
+
 (function () {
   const dot = document.querySelector(".cursor-dot");
   const ring = document.querySelector(".cursor-ring");
@@ -19,13 +20,11 @@ document.getElementById("yr").textContent = new Date().getFullYear();
 
     if (!isActive) {
       document.body.classList.add("cursor-active");
-      // Snap ring to start position on first move
       ringX = mouseX;
       ringY = mouseY;
       isActive = true;
     }
 
-    // Dot follows instantly
     dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
   });
 
