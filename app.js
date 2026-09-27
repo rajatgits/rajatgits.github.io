@@ -5,13 +5,12 @@ document.getElementById("yr").textContent = new Date().getFullYear();
   const ring = document.querySelector(".cursor-ring");
   if (!dot || !ring) return;
 
-  // Skip on touch devices
   if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
 
   let mouseX = 0,
-    mouseY = 0; // actual mouse position
+    mouseY = 0;
   let ringX = 0,
-    ringY = 0; // lagging ring position
+    ringY = 0;
   let isActive = false;
 
   document.addEventListener("mousemove", (e) => {
@@ -28,7 +27,6 @@ document.getElementById("yr").textContent = new Date().getFullYear();
     dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
   });
 
-  // Smooth ring follow (lerp)
   function animate() {
     ringX += (mouseX - ringX) * 0.18;
     ringY += (mouseY - ringY) * 0.18;
@@ -37,7 +35,6 @@ document.getElementById("yr").textContent = new Date().getFullYear();
   }
   animate();
 
-  // Hover detection on interactive elements
   const hoverTargets =
     "a, button, .btn, .card, .chip, input, textarea, [role='button']";
   document.addEventListener("mouseover", (e) => {
@@ -51,7 +48,6 @@ document.getElementById("yr").textContent = new Date().getFullYear();
     }
   });
 
-  // Click pulse
   document.addEventListener("mousedown", () => {
     document.body.classList.add("cursor-click");
   });
@@ -59,7 +55,6 @@ document.getElementById("yr").textContent = new Date().getFullYear();
     document.body.classList.remove("cursor-click");
   });
 
-  // Hide when leaving the window
   document.addEventListener("mouseleave", () => {
     document.body.classList.remove("cursor-active");
     isActive = false;
@@ -73,7 +68,7 @@ document.getElementById("yr").textContent = new Date().getFullYear();
 })();
 
 (function () {
-  const quote = "A TENACIOUS nerd with a coffee... ☕";
+  const quote = "A TENACIOUS nerd with a coffee...🍵";
 
   const target = document.getElementById("typing-text");
   if (!target) return;
@@ -81,7 +76,7 @@ document.getElementById("yr").textContent = new Date().getFullYear();
   let index = 0;
   let isDeleting = false;
 
-  const typeSpeed = 70;
+  const typeSpeed = 60;
   const deleteSpeed = 40;
   const pauseEnd = 2500;
   const pauseStart = 600;
