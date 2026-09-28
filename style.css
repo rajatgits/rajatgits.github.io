@@ -131,21 +131,6 @@ body.cursor-click .cursor-ring {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .cursor-dot,
-  .cursor-ring {
-    display: none;
-  }
-  html,
-  body,
-  a,
-  button,
-  .btn,
-  .card {
-    cursor: auto !important;
-  }
-}
-
 body {
   background:
     radial-gradient(
@@ -166,38 +151,8 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image:
-    radial-gradient(
-      circle at top left,
-      rgba(47, 141, 255, 0.08),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at bottom right,
-      rgba(255, 255, 255, 0.05),
-      transparent 24%
-    );
-  background-size:
-    100% 100%,
-    100% 100%;
-  opacity: 0.48;
-  mask-image: radial-gradient(
-    ellipse 100% 80% at 50% 0%,
-    #000 35%,
-    transparent 85%
-  );
-  -webkit-mask-image: radial-gradient(
-    ellipse 100% 80% at 50% 0%,
-    #000 35%,
-    transparent 85%
-  );
-  pointer-events: none;
-  z-index: 0;
-}
+
+/* Scanline texture overlay */
 body::after {
   content: "";
   position: fixed;
@@ -211,6 +166,7 @@ body::after {
   );
   opacity: 0.6;
 }
+
 a {
   color: inherit;
   text-decoration: none;
@@ -405,10 +361,6 @@ nav {
 
 /* TERMINAL */
 .hero-terminal {
-  position: relative;
-  right: auto;
-  top: auto;
-  transform: none;
   width: 100%;
   max-width: 460px;
   min-width: 0;
@@ -464,7 +416,7 @@ nav {
   flex-shrink: 0;
 }
 
-.dot {
+.terminal-dots .dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -760,11 +712,17 @@ h1 .accent {
   border-color: var(--teal);
   color: var(--teal);
 }
+
+/* Arrow hover: right arrows slide right, diagonal arrows move diagonally */
 .btn .arr {
+  display: inline-block;
   transition: transform 0.2s;
 }
 .btn:hover .arr {
   transform: translateX(3px);
+}
+a[target="_blank"].btn:hover .arr {
+  transform: translate(2px, -2px);
 }
 
 /* =========================================
@@ -1260,17 +1218,6 @@ footer {
   border-radius: 4px;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-    scroll-behavior: auto !important;
-  }
-  .instruments-duplicate {
-    display: none;
-  }
-}
-
 /* =========================================
    MOBILE LAYOUT OVERRIDES
    ========================================= */
@@ -1357,5 +1304,33 @@ footer {
   .quote-container {
     font-size: 0.9rem;
     padding: 0 10px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION (consolidated)
+   ========================================= */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .instruments-duplicate {
+    display: none;
+  }
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+  html,
+  body,
+  a,
+  button,
+  .btn,
+  .card {
+    cursor: auto !important;
   }
 }
